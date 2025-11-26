@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Welcome — Install App</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; text-align:center; }
+    .btn { display:inline-block; margin:10px; padding:12px 20px; border-radius:6px; text-decoration:none; border:1px solid #333; }
+    .install { background:#f0f0f0; }
+    .confirm { background:#28a745; color:white; }
+  </style>
+</head>
+<body>
+  <h2>Welcome to Guest Wi-Fi</h2>
+  <p>Please install our mobile app before using the internet.</p>
+
+  <!-- App Store links -->
+  <a class="btn install" href="https://apps.apple.com/ph/app/personal-collection/id6751012612" target="_blank">Download on the App Store</a>
+  <a class="btn install" href="https://play.google.com/store/apps/details?id=app.pcdsi.superapp&pcampaignid=web_share" target="_blank">Get it on Google Play</a>
+  <br><br>
+
+  <!-- If you host APK directly (Android only) -->
+  <a class="btn install" href="https://download.yourapp.com/yourapp.apk">Direct Android APK</a>
+
+  <!-- Confirm button posts to captive portal login handler -->
+  <form method="post" action="/login">
+    <input type="hidden" name="agree" value="installed">
+    <button class="btn confirm" type="submit">I have installed the App — Continue</button>
+  </form>
+
+  <p style="font-size:12px;margin-top:20px">By continuing you accept our Terms & Conditions.</p>
+</body>
+</html>
